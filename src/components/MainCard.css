@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+:root {
+  --color-site-2: hsl(0, 100%, 68%);
+
+  --color-brand-1: hsl(230, 29%, 20%);
+  --color-brand-2: hsl(230, 11%, 40%);
+  --color-site-1: hsl(231, 7%, 65%);
+  --color-brand-3: hsl(207, 33%, 95%);
+
+  --font-heading-cta-nav: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.ImgBox {
+  width: 100%;
+  margin-bottom: 8rem;
+}
+
+.ImgBox > img {
+  width: 140%;
+}
+
+.TxtBox-Title {
+  font-size: 4.5rem;
+  font-family: var(--font-heading-cta-nav);
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.TxtBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  font-family: var(--font-body);
+  margin-bottom: 2rem;
+}
+
+.TxtBox-BtnBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.TxtBox-BtnBox > button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: var(--font-heading-cta-nav);
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.TxtBox-BtnBox-NewBtn {
+  background-color: var(--color-brand-1);
+  border-radius: 2rem;
+}
+
+.TxtBox-BtnBox-ScheduleBtn {
+  background-color: var(--color-site-2);
+  border-radius: 0.5rem;
+}
+
+.TxtBox-BtnBox > p {
+  font-size: 1.8rem;
+  color: var(--color-brand-2);
+  text-transform: uppercase;
+  font-family: var(--font-heading-cta-nav);
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ImgBox {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .TxtBox {
+    grid-column: 1;
+  }
+
+  .TxtBox-Title {
+    max-width: 50rem;
+    font-size: 6.5rem;
+  }
+}

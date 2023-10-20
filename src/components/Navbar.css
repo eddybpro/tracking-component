@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+:root {
+  --color-site-2: hsl(0, 100%, 68%);
+
+  --color-brand-1: hsl(230, 29%, 20%);
+  --color-brand-2: hsl(230, 11%, 40%);
+  --color-site-1: hsl(231, 7%, 65%);
+  --color-brand-3: hsl(207, 33%, 95%);
+
+  --font-heading-cta-nav: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 3rem;
+}
+
+.Logo {
+  display: block;
+  width: 5rem;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.Menu {
+  position: absolute;
+  top: 4.5rem;
+  right: 3rem;
+}
+
+.Menu > button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 3rem;
+}
+
+.Menu > button > img {
+  width: 100%;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks.open {
+  display: block;
+  position: absolute;
+  top: 12rem;
+  left: 3rem;
+  right: 3rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 15px var(--color-brand-2);
+  z-index: 10;
+}
+
+.NavLinks-Link {
+  margin-bottom: 2rem;
+}
+
+.NavLinks-Link > a {
+  font-size: 1.8rem;
+  color: var(--color-brand-1);
+  font-family: var(--font-heading-cta-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.NavLinks-Link.login {
+  border-top: 1px solid var(--color-brand-2);
+  padding-top: 2rem;
+}
+
+.NavLinks-Link.login > a {
+  color: var(--color-brand-2);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    margin-bottom: 5rem;
+  }
+
+  .Menu {
+    display: none;
+  }
+
+  .NavLinks,
+  .NavLinks.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    gap: 2rem;
+  }
+
+  .NavLinks-Link.login {
+    padding-top: 0;
+    border-top: none;
+    margin-left: 8rem;
+  }
+}
