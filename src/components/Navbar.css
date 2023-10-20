@@ -124,6 +124,9 @@ nav {
     left: auto;
     right: auto;
     gap: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 
   .NavLinks-Link.login {
